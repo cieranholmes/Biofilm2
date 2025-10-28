@@ -1,11 +1,12 @@
 # Biofilm Simulation
 
-A comprehensive Java simulation of bacterial biofilm formation with Python visualization tools. This simulation models the growth, division, and interaction of bacterial cells in a nutrient-limited environment, including EPS (Extracellular Polymeric Substances) production and consumption.
+A comprehensive Java simulation of bacterial biofilm formation with Python visualization tools. This simulation models the growth, division, and interaction of bacterial cells in a nutrient-limited environment, including EPS (Extracellular Polymeric Substances) production and consumption. 
+
+The simulation is based off of the [2023 Soft Matter article "Interplay of cell motility and self-secreted extracellular polymeric substance induced depletion effects on spatial patterning in a growing microbial colony" by Bera et al](https://pubs.rsc.org/en/content/articlelanding/2023/sm/d3sm01144e).
 
 ## Structure
 - `simulation/` - Java simulation engine with multi-threaded physics
 - `visualisation/` - Python visualization and analysis tools
-- `article.pdf` - Research paper reference for simulation parameters
 
 ## Requirements
 - **Java 17+** (uses modern Java features including parallel streams)
@@ -139,26 +140,17 @@ python launch_viewer.py
 
 #### Visualization Options
 
-1. **🖥️ Main Visualization App** (`visualisation_app.py`)
+1. ** Main Visualization App** (`visualisation_app.py`)
    - Full-featured interface with navigation controls
    - Jump to specific ticks, real-time statistics
    - Professional UI with Previous/Next buttons
    - Save images of current state
 
-2. **🎮 Interactive Matplotlib Viewer** (`interactive_viz.py`)
-   - Simple arrow navigation interface
-   - Keyboard controls (arrow keys, Home/End)
-   - Good for basic tick-by-tick viewing
-
-3. ** Video Creation** (`create_video.py`)
+2. ** Video Creation** (`create_video.py`)
    - Creates MP4 videos from simulation data
    - Configurable frame rate and quality
    - Automatic processing of multiple part files
 
-4. ** Fast Video Creation** (`create_fast_video.py`)
-   - Optimized for large simulations
-   - Reduced memory usage
-   - Faster processing
 
 **Navigation**: Use arrow keys, mouse clicks, or type tick numbers to browse through simulation time steps.
 
@@ -254,4 +246,3 @@ This simulation is based on research paper parameters from Table S1, implementin
 - Use smaller `delta_time` for stability, larger for speed
 - Adjust `grid_cell_size` to balance resolution vs. performance
 - Monitor memory usage for large simulations
-- Use `create_fast_video.py` for large datasets
